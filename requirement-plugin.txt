@@ -1,0 +1,10 @@
+//Backend
+//cli
+npm install --save body-parser express express-validator mongoose mongoose-unique-validator nodemon
+
+
+//Frontend 
+//cli
+npm install --save react-router-dom
+
+
