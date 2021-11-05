@@ -1,0 +1,26 @@
+.main-header {
+    /* position: sticky; */
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--navbarColor);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    z-index: 1;
+    box-shadow: var(--shadowColor);
+    align-items: center;
+}
+
+/* color: #2291FF */
+@media (max-width: 768px) {
+    .main-header {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    
+    }
+}
+

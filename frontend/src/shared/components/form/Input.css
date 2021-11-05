@@ -1,0 +1,57 @@
+.form-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    /* width: 100%; */
+}
+
+.form-control > input {
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    height: 30px;
+    outline: none;
+}
+  
+.form-control label,
+.form-control input,
+.form-control textarea {
+display: block;
+}
+
+
+.form-control input,
+.form-control textarea {
+width: 100%;
+font: inherit;
+border: 1px solid #ccc;
+background: #f8f8f8;
+/* padding: 0.15rem 0.25rem; */
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+outline: none;
+background: #ebebeb;
+border-color: #1597E5;
+}
+
+.form-control--invalid label,
+.form-control--invalid p {
+color: red;
+}
+
+.form-control--invalid input,
+.form-control--invalid textarea {
+border-color: red;
+background: #ffd1d1;
+}
+
+@media (max-width: 768px) {
+    .form-control {
+        width: 100%;
+    }
+}
