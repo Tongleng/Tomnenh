@@ -2,11 +2,12 @@ import React from 'react';
 
 import './MainHeader.css';
 
-const MainHeader = props =>{
+const MainHeader = props => {
     return (
-        <div className="main-header">
+        <header className="main-header">
             {props.children}
-        </div>
+        </header>
     );
 }
+
 export default MainHeader;

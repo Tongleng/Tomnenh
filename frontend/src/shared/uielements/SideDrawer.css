@@ -1,0 +1,26 @@
+.side-drawer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    height: 100vh;
+    width:40%;
+    background: var(--navigationBar-Color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.main-navigation__dropdown-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .main-navigation__dropdown-nav {
+    display: none;
+  }
+  .drop-down {
+    display: none;
+  }
+}

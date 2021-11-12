@@ -7,11 +7,13 @@
     align-items: center;
     color: white;
     font-size: 12px;
+    /* padding: 20px; */
 }
 
 .copy-right > a {
     font-weight: 500;
     color: var(--fontMainColor);
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {

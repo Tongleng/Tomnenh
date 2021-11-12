@@ -3,7 +3,7 @@
     display: grid;
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
-    background-color: var(--navbarColor);
+    background-color: var(--primaryColor);
     padding-top: 1em;
     padding-bottom: 1em;
     position: fixed;
@@ -20,7 +20,7 @@
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-    
+        justify-items: end;
     }
 }
 

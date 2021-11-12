@@ -7,12 +7,25 @@
     align-items: flex-start;
     color: white;
     padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#logo-size {
+    width: 60px;
+    height: 60px;
 }
 
 a:hover{
     color: var(--mainColor);
 }
 
+.main-footer__left-side > .logo-title{
+    display: flex;
+    justify-content: flex-start;
+    color: var(--primaryColor);
+    text-decoration: none;
+}
 .main-footer > div {
     width: 30%;
 }
@@ -32,6 +45,7 @@ a:hover{
     color: white;
     padding-bottom: 10px;
     transition: .7s;
+    text-decoration: none;
 }
 
 .main-footer__center  a:hover,
@@ -41,27 +55,26 @@ a:hover{
     color: var(--mainColor);
 }
 
-.main-footer__left-side > p {
-    text-align:justify;
-}
-
 
 
 @media (max-width: 768px) { 
     .main-footer {
         display: flex;
-        height: 800px;
+        height: 600px;
         flex-direction: column;
-        padding-left: 20px;
-        padding-top: 30px;
+        /* padding: 20px; */
     }
+    
     .footer-icon {
         display: flex;
     }
+
     .main-footer__left-side > .footer-icon > a {
         font-size: 20px;
         display: flex;
-        padding-bottom: 20px;
+    }
+    footer > div {
+        padding: 20px;
     }
 }
 

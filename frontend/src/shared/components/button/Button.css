@@ -3,7 +3,7 @@
   padding: 0.5rem 1.5rem;
   border: 1px solid #1597E5;
   border-radius: 4px;
-  background: #1597E5;
+  background: var(--mainColor);
   color: white;
   cursor: pointer;
   margin-right: 1rem;
@@ -23,13 +23,13 @@
 
 .button--inverse {
   background: transparent;
-  color: #1597E5;
+  color: var(--mainColor);
 }
 
 .button--inverse:hover,
 .button--inverse:active {
   color: white;
-  background: #1597E5;
+  background: var(--mainColor);
 }
 
 .button--danger {
@@ -39,16 +39,16 @@
 
 .button--danger:hover,
 .button--danger:active {
-  background: #1597E5;
+  background: var(--mainColor);
   border-color: #1597E5;
 }
 
 .button:disabled,
 .button:hover:disabled,
 .button:active:disabled {
-  background: #1597E5;
+  background: var(--mainColor);
   color: #ffffff;
-  border-color: #1597E5;
+  border-color: var(--mainColor);
   cursor: not-allowed;
 }
 

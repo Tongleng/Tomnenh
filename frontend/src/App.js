@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import BackToTop from "react-back-to-top-button";
 
-
 import './App.css';
 
 import MainNavigation from './shared/components/navigation/MainNavigation';
@@ -15,8 +14,6 @@ import MainFooter from './shared/components/footer/MainFooter';
 import CopyRight from './shared/components/footer/CopyRight';
 
 import Authenthicate from './views/pages/authenticate/Authenticate'
-
-
 
 const App = (props) => {
   return (
