@@ -1,0 +1,25 @@
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: scroll;
+    width: 80%;
+    margin: 10px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.product-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card-item {
+    margin: 10px;
+    max-height: 200px;
+}
+
+@media (max-Width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

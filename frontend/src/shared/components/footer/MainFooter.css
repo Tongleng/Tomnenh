@@ -13,16 +13,21 @@
 
 #logo-size {
     width: 60px;
-    height: 60px;
+    height: 70px;
 }
 
 a:hover{
     color: var(--mainColor);
 }
 
+.main-footer__left-side {
+    width: 100%;
+}
+
 .main-footer__left-side > .logo-title{
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     color: var(--primaryColor);
     text-decoration: none;
 }
@@ -60,7 +65,7 @@ a:hover{
 @media (max-width: 768px) { 
     .main-footer {
         display: flex;
-        height: 600px;
+        height: 800px;
         flex-direction: column;
         /* padding: 20px; */
     }
@@ -69,9 +74,17 @@ a:hover{
         display: flex;
     }
 
+    h3 {
+        width: 300px;
+    }
+
     .main-footer__left-side > .footer-icon > a {
-        font-size: 20px;
+        font-size: 40px;
         display: flex;
+    }
+    .main-footer__left-side > p{
+        text-align: justify;
+        width: 300px;
     }
     footer > div {
         padding: 20px;

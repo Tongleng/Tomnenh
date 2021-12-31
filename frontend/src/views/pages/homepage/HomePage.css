@@ -1,5 +1,79 @@
 .home-page {
-    margin-top: 100px;
-    height: 2000px;
+    margin-top: 140px;
+    line-height: normal;
     width: 100%;
+    padding-bottom: 20px;
+}
+.home-page > center > h1 {
+    color: var(--mainColor);
+}
+
+.home-page > center {
+    margin-top: 40px;
+}
+
+#cooperate-logo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.assist-contiainer {
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--mainColor);
+}   
+
+.assist-contiainer > div > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+    text-decoration: none;
+    border: 1px solid var(--mainColor);
+    border-radius: 50%;
+    color: var(--primaryColor);
+    background-color: var(--mainColor);
+    /* box-shadow: var(--shadowColor); */
+    transition: .5s;
+}
+
+.assist-contiainer > div > a:hover {
+    color: var(--primaryColor);
+    /* box-shadow: var(--shadowColor); */
+    transform: rotateY(180deg);
+    transition: .5s;
+}
+
+.assist-item > p {
+    font-weight: 1000;
+}
+
+/* .icon-spin{
+    transition: 1s;
+}
+.icon-spin:hover {
+    transition: 1s;
+    transform: rotateY(180deg);
+} */
+
+
+
+@media (max-width: 768px) {
+    .assist-contiainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    
+    .assist-contiainer > a {
+        padding-bottom: 20px;
+    }
+    .assist-item {
+        padding-bottom: 40px;
+    }
 }

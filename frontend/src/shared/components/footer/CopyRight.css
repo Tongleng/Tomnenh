@@ -4,10 +4,10 @@
     background-color: var(--mainColor);
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     color: white;
     font-size: 12px;
-    /* padding: 20px; */
+    padding: 20px;
 }
 
 .copy-right > a {
@@ -19,6 +19,9 @@
 @media (max-width: 768px) {
     .copy-right {
         flex-direction: column;
+        padding: 0px;
+        justify-content: center;
+        align-items: center;
     }
 
     .copy-right > a, .copy-right > p {

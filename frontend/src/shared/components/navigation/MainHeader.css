@@ -2,6 +2,7 @@
     /* position: sticky; */
     display: grid;
     width: 100%;
+    line-height: 10px;
     grid-template-columns: repeat(2, 1fr);
     background-color: var(--primaryColor);
     padding-top: 1em;
@@ -12,6 +13,7 @@
     z-index: 1;
     box-shadow: var(--shadowColor);
     align-items: center;
+    border-bottom: 5px solid var(--mainColor);
 }
 
 /* color: #2291FF */

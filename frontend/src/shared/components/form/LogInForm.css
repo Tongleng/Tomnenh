@@ -3,12 +3,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid #1597E5; */
     margin: 50px;
     border-radius: 5px;
-    padding: 10px;
     height: 500px;
-    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .1);
+    border: 1px solid #ccc;
 }
 
 @media (max-width: 768px) {

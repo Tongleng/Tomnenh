@@ -16,6 +16,8 @@ const MainFooter = props => {
                     <h3>Tomnenh</h3>
                 </a>
                 <p>Our agency who will be assistant which assist you to ordering goods and products from oversea</p>
+                
+                <h3>Our Social Media</h3>
                 <div className="footer-icon">
                     <a href="https://www.facebook.com">
                         <FaFacebook />
