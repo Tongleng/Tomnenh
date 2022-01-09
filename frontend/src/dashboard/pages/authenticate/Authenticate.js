@@ -1,4 +1,4 @@
-import React, {useState, useCallback, useContext} from "react";
+import React, { useState, useCallback, useContext, useEffect } from "react";
 import {
   // BrowserRouter as Router,
   Route,
@@ -9,6 +9,8 @@ import Dashboards from "../dashboards/Dashboards";
 import { AuthContext } from "../../../shared/context/AuthContext";
 
 import { useForm } from "../../../shared/hooks/form-hook";
+
+import axios from "axios";
 
 import {
   VALIDATOR_EMAIL,
@@ -22,7 +24,6 @@ import Button from "../../../shared/components/button/Button";
 import "./Authenticate.css";
 
 const Authenticate = (props) => {
-
   const [formState, inputHandler] = useForm(
     {
       email: {
@@ -36,10 +37,24 @@ const Authenticate = (props) => {
     },
     false
   );
-  
+
   const auth = useContext(AuthContext);
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    axios
+      .post("http://localhost:3002/api/users/login", {
+        email: email,
+        password: password,
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const login = useCallback(() => {
     setIsLoggedIn(true);
@@ -49,50 +64,54 @@ const Authenticate = (props) => {
     setIsLoggedIn(false);
   }, []);
 
-  const authSubmitHandler = event => {
+  const authSubmitHandler = (event) => {
     event.preventDefault();
     console.log(formState.inputs);
     auth.login();
   };
-  
-  if(isLoggedIn){
+
+  if (isLoggedIn) {
     <Route path="/asd/admin" exact>
       <Dashboards />
-    </Route>
+    </Route>;
   }
 
   return (
+    <AuthContext.Provider
+      value={{ isLoggedIn: isLoggedIn, login: login, logout: logout }}
+    >
+      <div className="authenticate-page">
+        {/* <LogInForm /> */}
+        <form>
+          <h3>Admin Login</h3>
+          <Input
+            element="input"
+            id="email"
+            type="email"
+            placeholder="Example@email.com"
+            validators={[VALIDATOR_EMAIL()]}
+            errorText="Please enter a valid email"
+            onInput={inputHandler}
+          />
+          <Input
+            element="input"
+            id="pasword"
+            type="password"
+            placeholder="Password"
+            validators={[VALIDATOR_MINLENGTH(8)]}
+            errorText="Please enter a valid password, at least 8 characters"
+            onInput={inputHandler}
+          />
 
-    <AuthContext.Provider 
-      value={{ isLoggedIn: isLoggedIn, login:login, logout:logout }}>
-    <div className="authenticate-page">
-      {/* <LogInForm /> */}
-      <form >
-        <h3>Admin Login</h3>
-        <Input
-          element="input"
-          id="email"
-          type="email"
-          placeholder="Example@email.com"
-          validators={[VALIDATOR_EMAIL()]}
-          errorText="Please enter a valid email"
-          onInput={inputHandler}
-        />
-        <Input
-          element="input"
-          id="pasword"
-          type="password"
-          placeholder="Password"
-          validators={[VALIDATOR_MINLENGTH(8)]}
-          errorText="Please enter a valid password, at least 8 characters"
-          onInput={inputHandler}
-        />
-
-        <Button type="submit" disabled={ formState.isValid} onClick={authSubmitHandler}>
-          Login
-        </Button>
-      </form>
-    </div>
+          <Button
+            type="submit"
+            disabled={formState.isValid}
+            onClick={authSubmitHandler}
+          >
+            Login
+          </Button>
+        </form>
+      </div>
     </AuthContext.Provider>
   );
 };
