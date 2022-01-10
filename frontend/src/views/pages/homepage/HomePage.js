@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import HomeSlider from "../../components/slider/Home-Slider";
 
@@ -10,6 +10,9 @@ import {
   FaShippingFast
 } from "react-icons/fa";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 // import Loading from "../../../shared/components/uielements/Loading";
 // import TCamLogo from "../../../assets/image/tcambodia.png";
 import "./HomePage.css";
@@ -19,6 +22,9 @@ import ProductContainer from  '../../components/product-container/ProductContain
 
 const HomePage = (props) => {
   
+  useEffect(() => {
+    AOS.init({duration: 1500})
+  },[])
 
   // const [isLoading, setIsLoading] = useState(false);
   // const [error, setError] = useState();
@@ -53,28 +59,28 @@ const HomePage = (props) => {
       <center>
         <h1>Assists</h1>
         <div className="assist-contiainer">
-          <div className="assist-item">
+          <div className="assist-item" data-aos="flip-left" >
             <Link to="/service">
               <FaCartPlus className="icon-spin" />
             </Link>
             <p>Help to Order</p>
           </div>
 
-          <div className="assist-item">
+          <div className="assist-item" data-aos="flip-left" >
             <Link to="/service">
               <FaHandsHelping className="icon-spin" />
             </Link>
             <p>Help to Negotiate</p>
           </div>
 
-          <div className="assist-item">
+          <div className="assist-item"  data-aos="flip-left" >
             <Link to="/service">
               <FaHandHoldingUsd className="icon-spin" />
             </Link>
             <p>Help to Buy</p>
           </div>
 
-          <div className="assist-item">
+          <div className="assist-item" data-aos="flip-left" >
             <Link to="/service">
               <FaShippingFast className="icon-spin" />
             </Link>

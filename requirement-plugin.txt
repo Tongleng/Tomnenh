@@ -8,3 +8,7 @@ npm install --save body-parser express express-validator mongoose mongoose-uniqu
 npm install --save react-router-dom
 
 
+//Animate on Scroll
+//cli
+npm install aos --save
+

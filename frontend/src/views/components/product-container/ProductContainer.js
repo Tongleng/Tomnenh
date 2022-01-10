@@ -10,8 +10,15 @@ import { CardActionArea } from "@mui/material";
 
 import axios from "axios";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const ProductContainer = (props) => {
   const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    AOS.init({duration: 1000});
+  },[])
 
   useEffect(() => {
     axios
@@ -34,7 +41,7 @@ const ProductContainer = (props) => {
       <h1>Products</h1>
       <Box className="product-container">
         {products.map((item, index) => (
-          <Card sx={{ maxWidth: 345 }} className="card-item">
+          <Card sx={{ maxWidth: 345 }} className="card-item" data-aos="fade-up">
             <CardActionArea>
               <CardMedia
                 component="img"

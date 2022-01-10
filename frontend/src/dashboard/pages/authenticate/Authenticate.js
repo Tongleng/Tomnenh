@@ -45,8 +45,8 @@ const Authenticate = (props) => {
   useEffect(() => {
     axios
       .post("http://localhost:3002/api/users/login", {
-        email: email,
-        password: password,
+        // email: email,
+        // password: password,
       })
       .then((res) => {
         console.log(res);
