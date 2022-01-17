@@ -26,10 +26,10 @@ const ServicePage = (props) => {
         })
     },
     [],
-    setTimeout(() => setLoading(false), 1000)
+    setTimeout(() => setLoading(false), 500)
   )
   useEffect(() => {
-    AOS.init({duration: 2000})
+    AOS.init({duration: 500})
   })
   return (
     <div className="service-page">
@@ -40,7 +40,10 @@ const ServicePage = (props) => {
             <img src={service.image} alt="card" />
           </div>
           <div className="content-card-container">
-            <h1>{service.title}</h1>
+            <h1>
+              <li>
+              {service.title}
+                </li></h1>
             <p>{service.description}</p>
           </div>
         </div>

@@ -68,15 +68,12 @@ const ContactPage = (props) => {
         <div id="right">
           {contacts.map((contact) => (
             <div key={contact._id}>
-              {<a href="mailto:tcambodia.info@gmail.com">{contact.email}</a>}
+              {<a href={`mailto:${contact.email}`} >{contact.email}</a>}
               {contact.number.map((n) => (
-                <a href="tel:+66644905127">{n}</a>
+                <a href={`tel: ${n}`}>{n}</a>
               ))}
             </div>
           ))}
-          {/* <a href="https://google.com">tcambodia.info@gmail.com</a>
-          <a href="https://google.com">tcambodia@facebook.com</a>
-          <a href="https://google.com">+855 123 456</a> */}
         </div>
       </div>
       <div className="contact-form" data-aos="fade">

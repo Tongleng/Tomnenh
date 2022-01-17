@@ -15,7 +15,7 @@
 
 .card-item {
     margin: 10px;
-    max-height: 200px;
+    max-height: 300px;
 }
 
 @media (max-Width: 768px) {
