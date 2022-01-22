@@ -27,18 +27,29 @@ const HomeSlider = (props) => {
 
   return (
     <Slider autoplay={5000} className="slider-wrapper">
-      {sliders.map((item, index) => (
+      {sliders.map((item) => (
         <div
-          key={index}
+          key={item._id}
           style={{ background: `url('${item.image}') no-repeat` }}
           className="slider-content"
         >
           <div className="inner">
             <h1>{item.title}</h1>
             <p>{item.description}</p>
-            <Link to={item.url}>
-              <button id="slider-button">Service</button>
-            </Link>
+            {/* <Link to="/">
+              <button id="slider-button" >{item.buttontext}</button>
+            </Link> */}
+            {
+              item.buttontext.map((t) => (
+                <div>
+
+                <Link to='/service'>
+                  <button id="slider-button">{t}</button>
+                </Link>
+                </div>
+              ))
+            }
+            
           </div>
         </div>
       ))}

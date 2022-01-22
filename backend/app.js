@@ -9,6 +9,7 @@ const aboutRoutes = require('./routes/about-route')
 const sliderRoutes = require('./routes/slider-route')
 const corporationRoutes = require('./routes/corporation-route')
 const productRoutes = require('./routes/product-route')
+const socialMediaRoutes = require('./routes/social-media-route')
 
 const HttpError = require('./models/http-error')
 const port = 3002
@@ -42,6 +43,7 @@ app.use('/api/about', aboutRoutes)
 app.use('/api/slider', sliderRoutes)
 app.use('/api/corporation', corporationRoutes)
 app.use('/api/product', productRoutes)
+app.use('/api/social', socialMediaRoutes)
 
 
 
