@@ -51,7 +51,7 @@
     color: var(--mainColor);
     display: flex;
     flex-direction: row;
-    border-bottom: 5px solid var(--mainColor);
+    /* border-bottom: 5px solid var(--mainColor); */
     padding-bottom: 20px;
     opacity: .9;
     transition: .5s;

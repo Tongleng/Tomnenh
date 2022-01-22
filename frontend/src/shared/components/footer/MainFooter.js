@@ -23,19 +23,19 @@ const MainFooter = props => {
                 <p>Our agency who will be assistant which assist you to ordering goods and products from oversea</p>
                 
                 <h3>Our Social Media</h3>
-                {/* <div className="footer-icon">
+                <div className="footer-icon">
                     
-                    <a href="https://www.facebook.com">
+                    <a href={}>
                         <FaFacebook />
                     </a>
-                    <a href="https://www.line.com">
-                        <FaLine />
+                    <a href={}>
+                        <FaInstagram />
                     </a>
-                    <a href="https://www.telegram.com">
+                    <a href={}>
                         <FaTelegram />
                     </a>
-                </div> */}
-                <div className="footer-icon">
+                </div>
+                {/* <div className="footer-icon">
                     <a href="https://www.facebook.com/WeHelpToBuy">
                         <FaFacebook />
                     </a>
@@ -45,7 +45,7 @@ const MainFooter = props => {
                     <a href="https://www.instagram.com/invites/contact/?i=1izefrv6v9pe7&utm_content=nd1o40t">
                         <FaInstagram />
                     </a>
-                </div> 
+                </div>  */}
             </div>
             <div className="main-footer__center">
                 <h3>Site Map</h3>

@@ -1,74 +1,59 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from "react"
+import axios from "axios"
 
-import { FaFacebookMessenger, FaTelegram, FaPhoneAlt } from "react-icons/fa";
+import { FaFacebookMessenger, FaTelegram, FaPhoneAlt } from "react-icons/fa"
 
-import "./Card.css";
+import "./Card.css"
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const Card = (props) => {
-    const [abouts, setAbouts] = useState([]);
+  const [abouts, setAbouts] = useState([])
 
-    const contactIcon = {
-      messenger: "FaFacebookMessenger",
-      telegram: "FaFacebookMessenger",
-      phone: "FaPhoneAlt"
-    }
+  useEffect(() => {
+    AOS.init({ duration: 1000 })
+  })
 
-    useEffect(() => {
-      AOS.init({duration: 1000})
-    })
+  useEffect(() => {
+    axios
+      .get("http://localhost:3002/api/about")
+      .then((res) => {
+        console.log(res)
 
-    useEffect(() => {
-        axios
-        .get("http://localhost:3002/api/about")
-        .then((res) => {
-            console.log(res);
-
-            const responseData = res.data.abouts;
-            setAbouts(responseData);
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-    }, []);
+        const responseData = res.data.abouts
+        setAbouts(responseData)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }, [])
 
   return (
     <>
-      {abouts.map((item) => (
-        <div className="card" key={item._id} data-aos="fade-out">
+      {abouts.map((about) => (
+        <div className="card" key={about._id} data-aos="fade-out">
           <div className="image-container">
-            <img src={item.image} alt="card1" />
+            <img src={about.image} alt="card1" />
           </div>
           <div className="text-container">
-            <h3>{item.agencyName}</h3>
-            <div className="about-icons" >
-              {
-                contactIcon.map((i) => (
-                  <a>
-                  
-                  </a>
-                ))
-              }
-              {/* <a href="/">
+            <h3>{about.agencyName}</h3>
+            <div className="about-icons">
+              <a href={about.messenger}>
                 <FaFacebookMessenger />
               </a>
-              <a href="/">
+              <a href={about.telegram}>
                 <FaTelegram />
-                
-                  
               </a>
-              <a href="/">
+              <a href={about.phone}>
                 <FaPhoneAlt />
-              </a> */}
+              </a>
             </div>
           </div>
         </div>
       ))}
     </>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card
