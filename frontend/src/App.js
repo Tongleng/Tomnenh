@@ -26,7 +26,7 @@ const App = (props) => {
     <>
       <Router>
         <MainNavigation />
-
+      
         <Switch>
           <Route path="/" exact>
             <HomePage />

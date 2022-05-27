@@ -26,16 +26,19 @@ const HomeSlider = (props) => {
   }, [])
 
   return (
-    <Slider autoplay={5000} className="slider-wrapper">
+    // <Slider autoplay={5000} className="slider-wrapper">
+    <Slider className="slider-wrapper">
       {sliders.map((item) => (
         <div
           key={item._id}
-          style={{ background: `url('${item.image}') no-repeat` }}
+          style={{ background: `url('${item.image}') no-repeat`, backgroundSize: 'cover'  }}
           className="slider-content"
         >
           <div className="inner">
-            <h1>{item.title}</h1>
-            <p>{item.description}</p>
+            <div className="inner-content">
+              <h1>{item.title}</h1>
+              <p>{item.description}</p>
+            </div>
             {/* <Link to="/">
               <button id="slider-button" >{item.buttontext}</button>
             </Link> */}

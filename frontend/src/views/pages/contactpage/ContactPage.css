@@ -79,10 +79,10 @@
 .contact-address{
     width: 100%;
 }
-.contact-address > iframe {
+/* .contact-address > iframe {
     border: none;
     width: 100%;
-}
+} */
 .contact-address > h1 {
     padding-top: 20px;
     padding-left: 20px;

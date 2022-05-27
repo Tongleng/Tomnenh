@@ -2,7 +2,6 @@
     margin-top: 140px;
     line-height: normal;
     width: 100%;
-    padding-bottom: 20px;
 }
 .home-page > center > h1 {
     color: var(--mainColor);
@@ -18,8 +17,7 @@
     border-radius: 50%;
 }
 
-.assist-contiainer {
-    
+.assist-contiainer {  
     display: flex;
     justify-content: space-around;
     align-items: center;

@@ -10,6 +10,7 @@ const sliderRoutes = require('./routes/slider-route')
 const corporationRoutes = require('./routes/corporation-route')
 const productRoutes = require('./routes/product-route')
 const socialMediaRoutes = require('./routes/social-media-route')
+const googleMap = require('./routes/google-map-route')
 
 const HttpError = require('./models/http-error')
 const port = 3002
@@ -44,10 +45,7 @@ app.use('/api/slider', sliderRoutes)
 app.use('/api/corporation', corporationRoutes)
 app.use('/api/product', productRoutes)
 app.use('/api/social', socialMediaRoutes)
-
-
-
-
+app.use('/api/googlemap', googleMap)
 
 // Handling Route Error
 app.use((req, res, next) => {

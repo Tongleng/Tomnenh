@@ -18,7 +18,7 @@ const AboutPage = (props) => {
         {/* <img src={abouts.image} alt="about-top-img" /> */}
         <h1>One Vision, We're together.</h1>
         <p>
-          Stay home and shop online. You're too pretty to have to look for a
+          Stay home and shopping online. You're too pretty to have to look for a
           parking spot.
         </p>
       </div>

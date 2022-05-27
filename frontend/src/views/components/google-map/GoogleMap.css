@@ -1,0 +1,8 @@
+iframe {
+    border: none;
+    width: 100%;
+}
+
+.google-map {
+    border: 1px solid #ccc;
+}
